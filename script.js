@@ -44,6 +44,3 @@ function render(){
   document.querySelector("#completedCount").textContent=tasks.filter(t=>t.completed).length;
 }
 render();
-
-let alpha = [1,2,3]
-alpha.push([1,23,3354])
