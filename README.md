@@ -8,7 +8,7 @@ A simple student-focused task manager built with HTML, CSS, and vanilla JavaScri
 - Filter all, pending, and completed tasks
 - Delete tasks
 - Persistent storage with browser localStorage
-- Responsive layout for mobile and desktop
+- Responsive layout for mobile and desktopp
 
 ## Run locally
 Open `index.html` in your browser. For a better development workflow, use VS Code Live Server.
