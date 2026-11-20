@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><span class="brand-mark">✓</span><div><h1>Taskflow</h1><p>Student Task Manager</p></div></div>
+    <div class="header-note">Keep your semester on track</div>
+  </header>
+  <main class="container">
+    <section class="welcome">
+      <div><p class="eyebrow">YOUR WORKSPACE</p><h2>Plan it. Do it. Done.</h2><p class="subtext">Organize assignments, deadlines, and daily priorities.</p></div>
+      <div class="date-card"><span>Today</span><strong id="today"></strong></div>
+    </section>
+    <section class="stats">
+      <article class="stat-card"><span>Total tasks</span><strong id="totalCount">0</strong></article>
+      <article class="stat-card"><span>Pending</span><strong id="pendingCount">0</strong></article>
+      <article class="stat-card"><span>Completed</span><strong id="completedCount">0</strong></article>
+    </section>
+    <section class="task-panel">
+      <div class="panel-heading"><div><h3>My Tasks</h3><p>Stay focused on what matters today.</p></div>
+        <button id="showFormBtn" class="primary-btn">+ Add task</button>
+      </div>
+      <form id="taskForm" class="task-form hidden">
+        <input id="taskTitle" type="text" placeholder="Task title (e.g. Complete Python assignment)" required maxlength="90">
+        <select id="taskPriority"><option value="Medium">Medium priority</option><option value="High">High priority</option><option value="Low">Low priority</option></select>
+        <input id="taskDue" type="date">
+        <button class="primary-btn" type="submit">Save task</button>
+        <button class="secondary-btn" id="cancelBtn" type="button">Cancel</button>
+      </form>
+      <div class="filters"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Pending">Pending</button><button class="filter" data-filter="Completed">Completed</button></div>
+      <div id="taskList" class="task-list"></div>
+      <div id="emptyState" class="empty-state"><div class="empty-icon">☑</div><h4>No tasks yet</h4><p>Add a task to start organizing your work.</p></div>
+    </section>
+    <footer>Made for students • Keep moving one task at a time</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
